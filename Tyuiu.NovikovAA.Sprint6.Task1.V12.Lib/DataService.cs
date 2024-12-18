@@ -20,7 +20,7 @@ namespace Tyuiu.NovikovAA.Sprint6.Task1.V12.Lib
                 if (denominator == 0)
                 {
                     Console.WriteLine($"Деление на ноль при x = {x}.  Результат: NaN");
-                    valueArray[count] = double.NaN; //  NaN - не число
+                    valueArray[count] = 0; //  NaN - не число
                 }
                 else
                 {
