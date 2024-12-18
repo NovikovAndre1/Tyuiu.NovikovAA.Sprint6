@@ -34,7 +34,7 @@ namespace Tyuiu.NovikovAA.Sprint6.Task3.V27.Lib
                     }
                 }
             }
-
+             
             return result;
         }
     }
