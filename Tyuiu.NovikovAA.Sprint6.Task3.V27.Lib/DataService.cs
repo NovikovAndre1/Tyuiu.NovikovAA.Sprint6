@@ -17,24 +17,21 @@ namespace Tyuiu.NovikovAA.Sprint6.Task3.V27.Lib
             // Копируем данные из исходной матрицы в новую
             Array.Copy(matrix, result, matrix.Length);
 
-            // Сортируем строки по значению в четвёртом столбце
-            for (int i = 0; i < rows; i++)
+            // Сортируем только четвертый столбец
+            for (int i = 0; i < rows - 1; i++)
             {
                 for (int j = i + 1; j < rows; j++)
                 {
                     if (result[i, 3] > result[j, 3])
                     {
-                        // Меняем строки местами
-                        for (int k = 0; k < columns; k++)
-                        {
-                            int temp = result[i, k];
-                            result[i, k] = result[j, k];
-                            result[j, k] = temp;
-                        }
+                        // Меняем только элементы четвертого столбца
+                        int temp = result[i, 3];
+                        result[i, 3] = result[j, 3];
+                        result[j, 3] = temp;
                     }
                 }
             }
-             
+
             return result;
         }
     }
